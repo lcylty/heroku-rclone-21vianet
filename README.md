@@ -6,11 +6,11 @@ Using Rclone with 21vianet mod and Aria2, even UNRAR easily on Heroku.<br>
 1. Create new app
 
 ```
-heroku create myapp -b https://github.com/88pan/heroku-rclone-21vianet.git
-heroku git:clone -a myapp
+heroku create zt-rc -b https://github.com/lcylty/heroku-rclone-21vianet.git
+heroku git:clone -a zt-rc
 
 # or useing existed app
-heroku buildpacks:set https://github.com/88pan/heroku-rclone-21vianet.git -a myapp
+heroku buildpacks:set https://github.com/lcylty/heroku-rclone-21vianet.git -a zt-rc
 ```
 
 2. Setup Rclone by following [Rclone Docs](https://rclone.org/docs/).<br> 
@@ -27,7 +27,7 @@ Rclone with 21vianet patch and Gclone mod provided by xhuang.
 3. Go to `myapp` directory, copy `rclone.conf` and winrar registraton key `.rarreg.key` (optional) then commit the change.
 
 ```
-cd myapp
+cd zt-rc
 git add .
 git commit -am "add config"
 git push heroku master
@@ -36,10 +36,10 @@ git push heroku master
 ## Usage
 ### Open Terminal
 ```
-cd myapp
+cd zt-rc
 heroku run bash
 # or
-heroku run bash --a myapp
+heroku run bash --a zt-rc
 ```
 
 ### Rclone
